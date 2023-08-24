@@ -55,6 +55,9 @@ void * nextList(List * list) {
 
 void * lastList(List * list) {
   //retorna el dato del último elemento en la lista y actualiza el current al nodo correspondiente.
+  if (list->head == NULL){
+    return NULL;
+  }
   list->current = list -> tail;
   return list->tail;
 }
