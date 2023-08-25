@@ -241,3 +241,19 @@ list.c:99:5: error: ‘newNode’ undeclared (first use in this function); did y
 list.c:99:5: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 8a23880
+Fri 25 Aug 2023 01:53:48 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:99:19: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   99 |     Node * newNode->next=NULL;
+      |                   ^~
+list.c:99:19: error: expected expression before ‘->’ token
+list.c:100:16: error: ‘newNode’ undeclared (first use in this function); did you mean ‘Node’?
+  100 |     list->tail=newNode;
+      |                ^~~~~~~
+      |                Node
+list.c:100:16: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+b8e0042
