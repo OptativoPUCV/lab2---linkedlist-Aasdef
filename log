@@ -229,3 +229,15 @@ Thu 24 Aug 2023 05:22:03 AM UTC:
  tests:  10|2
 total_score: 45/70
 ee48650
+Fri 25 Aug 2023 01:53:22 AM UTC: 
+ list.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:99:5: error: ‘newNode’ undeclared (first use in this function); did you mean ‘Node’?
+   99 |     newNode->next=NULL;
+      |     ^~~~~~~
+      |     Node
+list.c:99:5: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+8a23880
