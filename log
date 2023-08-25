@@ -312,3 +312,17 @@ list.c:138:10: error: returning ‘int’ from a function with return type ‘vo
 cc1: all warnings being treated as errors
 Compilation failed
 8f08992
+Fri 25 Aug 2023 03:40:19 AM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:126:18: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  126 |   int variable = list->current->data;
+      |                  ^~~~
+list.c:141:10: error: returning ‘int’ from a function with return type ‘void *’ makes pointer from integer without a cast [-Werror=int-conversion]
+  141 |   return variable;
+      |          ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+14e1eae
