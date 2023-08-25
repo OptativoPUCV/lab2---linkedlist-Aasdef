@@ -94,12 +94,14 @@ void pushBack(List * list, void * data) {
 
 void pushCurrent(List * list, void * data) {
   //agrega un dato a continuación del nodo apuntado por list->current.
-  if (list==NULL || list->current->next==NULL){
-    //crear nodo
-    Node * newNode->next=NULL;
-    list->tail=newNode;
+  if (list->current==NULL){
+    return;
   }
-  list->current->next=data;
+  Node *newNode=(Node*)malloc(sizeof(Node));
+  newNode->data=data;
+  
+  newNode->next=list->current->next;
+  list->current->next=newNode;
 }
 
 void * popFront(List * list) {
