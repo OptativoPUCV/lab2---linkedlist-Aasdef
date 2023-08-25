@@ -281,3 +281,20 @@ Fri 25 Aug 2023 02:10:58 AM UTC:
  tests:  10|2
 total_score: 45/70
 c43a50d
+Fri 25 Aug 2023 03:37:07 AM UTC: 
+ list.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:125:18: error: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+  125 |   int variable = list->current->data;
+      |                  ^~~~
+list.c:126:7: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+  126 |   if (list->current = list->head){
+      |       ^~~~
+list.c:138:10: error: returning ‘int’ from a function with return type ‘void *’ makes pointer from integer without a cast [-Werror=int-conversion]
+  138 |   return variable;
+      |          ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8636e3f
