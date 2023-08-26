@@ -97,6 +97,9 @@ void pushCurrent(List * list, void * data) {
   if (list->current==NULL){
     return;
   }
+  if (list->current->next==NULL){
+    list->current->next = list->head; 
+  }
   Node *newNode=(Node*)malloc(sizeof(Node));
   newNode->data=data;
   newNode->prev=list->head;
