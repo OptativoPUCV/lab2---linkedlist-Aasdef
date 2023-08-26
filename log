@@ -326,3 +326,9 @@ list.c:141:10: error: returning ‘int’ from a function with return type ‘vo
 cc1: all warnings being treated as errors
 Compilation failed
 14e1eae
+Sat 26 Aug 2023 01:46:52 AM UTC: 
+ list.c | 26 +++++++++++++++-----------
+ 1 file changed, 15 insertions(+), 11 deletions(-)
+ tests:  11|1
+total_score: 60/70
+38319de
